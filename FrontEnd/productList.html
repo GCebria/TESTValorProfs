@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <table  class="table table-hover">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Avaliable</th>
+          <th>Price</th>
+        </tr>
+        </thead>
+        <tbody id="product-list">
+        </tbody>
+      </table>
+    </div>
+    <button type="button" class="btn btn-danger" id="btnlogout">Logout</button>
+
+    <div class="modal fade" id="addProduct-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">New product</h4>
+          </div>
+          <div class="modal-body">
+            <form id="formAddProduct" method="post">
+              Id: <input type="text" id="createId"/></br>
+              Name: <input type="text" id="createName"/></br>
+              Avaliable: <input type="text" id="createAvaliable"/></br>
+              Price: <input type="text" id="createPrice"/></br>
+              Description: <input type="text" id="createDescription"/></br>
+              Data created: <input type="text" id="createDateCreated" /></br>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="btnSubmit" class="btn btn-success">Add product</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="updateProduct-modal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Update product</h4>
+          </div>
+          <form id="formUpdateProduct" method="post">
+          <div class="updateModal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="btnSubmit" class="btn btn-success">Update</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="controllers/productListController.js"></script>
+    <script src="controllers/productController.js"></script>
+
+  </body>
+</html>
